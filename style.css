@@ -1,0 +1,504 @@
+:root {
+  --primary: #000000;
+  --bg: #000000;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin: 0;
+  min-height: 2800px;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .logo {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.navbar .navbar-nav a {
+  color: #ffffff;
+  padding: 6px 15px;
+  border-radius: 40px;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 1rem;
+}
+
+.navbar-nav a:active,
+.navbar-nav a:focus {
+  background-color: rgba(254, 254, 254, 0.5);
+  color: rgba(0, 0, 0, 0.5);
+}
+.navbar-nav a:hover {
+  background-color: rgba(
+    254,
+    254,
+    254,
+    0.5
+  ); /* Ganti dengan warna background yang diinginkan saat hover */
+  color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Ganti dengan warna teks yang diinginkan saat hover */
+}
+.navbar-nav a {
+  background-color: transparent;
+  color: white; /* Ganti dengan warna teks saat tidak di klik atau di hover */
+  border: none;
+}
+.navbar .navbar-extra a {
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+#hamburger-menu {
+  display: inline-block;
+}
+
+.navbar-extra a:hover,
+.navbar-extra a.active {
+  background-color: rgba(254, 254, 254, 0.5);
+  color: rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 1600px) {
+  .navbar,
+  .navbar-extra {
+    padding: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .navbar,
+  .navbar-extra,
+  body {
+    padding: 20px;
+  }
+}
+@media (max-width: 375px) {
+  .navbar,
+  .navbar-extra,
+  body {
+    padding: 20px;
+  }
+}
+/* hero section */
+
+.hero {
+  position: relative;
+  margin-top: 360px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1600px;
+  max-width: 1600px; /* Set a maximum width if necessary */
+  height: 800px;
+  padding: 50px;
+  background-color: #f5f5f5;
+  z-index: 1;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero ::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg rgba(1, 1, 3, 1) 3%,
+    rgba(254, 254, 254, 0.5) 25%
+  );
+}
+
+.container {
+  width: 100%; /* Ensure the container takes full width */
+  max-width: none; /* Remove any max-width limitations */
+  margin: 0 auto; /* Center the container horizontally if needed */
+}
+
+.item {
+  background-position: 50% 50%;
+  border: none;
+  transition: 0.5s;
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  text-align: center;
+  transform: translate(0, -50%);
+}
+.item:nth-child(1),
+.item:nth-child(2) {
+  left: 0;
+  top: 0;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.item .content {
+  position: absolute;
+  top: 50%;
+  left: 600px;
+  width: 1000px;
+  text-align: center;
+  padding: 0;
+  color: #eee;
+  transform: translate(-30%, -50%);
+  display: none;
+  font-family: system-ui;
+}
+.item:nth-child(2) .content {
+  display: block;
+  z-index: 11111;
+}
+.item .name {
+  font-size: 100px;
+  margin: 20px;
+  font-weight: bold;
+  opacity: 0;
+  animation: showcontent 1s ease-in-out 1 forwards;
+  text-align: center;
+}
+
+.button {
+  position: relative;
+  overflow: hidden;
+  border: solid 2px white;
+  background-color: inherit;
+  padding: 3px 20px;
+  color: white;
+  margin-top: 6%;
+  width: 80%;
+  height: 70px;
+  font-size: 20px;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+  animation: showcontent 1s ease-in-out 1 forwards;
+}
+.button::after {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+.button:hover::after {
+  transform: scale(1);
+}
+
+.button:active::after {
+  transform: scale(0);
+}
+
+#button.button:hover {
+  transform: scale(1.1); /* Scale the button on hover */
+  cursor: pointer;
+}
+
+#button .button:active {
+  transform: scale(0.9); /* Scale the button on click */
+}
+
+@keyframes showcontent {
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+    filter: blur(0);
+  }
+}
+
+.buttons {
+  position: absolute;
+  top: 50%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.buttons button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  transition: 0.5s;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.left-button {
+  order: 1; /* Menempatkan tombol kiri di sebelah kiri */
+}
+
+.right-button {
+  order: 2; /* Menempatkan tombol kanan di sebelah kanan */
+}
+
+/* Menggeser tombol ke arah kiri */
+.left-button {
+  position: relative;
+  left: -100px; /* Sesuaikan nilai ini sesuai dengan yang diinginkan */
+}
+
+.right-button {
+  position: relative;
+  right: 100px; /* Sesuaikan nilai ini sesuai dengan yang diinginkan */
+}
+
+.buttons:hover .left-button {
+  transform: translateX(
+    -10px
+  ); /* Sesuaikan nilai ini sesuai dengan yang diinginkan */
+}
+
+.buttons:hover .right-button {
+  transform: translateX(20px);
+}
+@media (max-width: 768px) {
+  .hero {
+    padding: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .hero {
+    padding: 50px;
+  }
+}
+/* biography */
+* {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+.container {
+  background: #000000;
+  padding: 15px 9%;
+  padding-bottom: 50px;
+  margin-top: -400px;
+}
+
+.container .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 15px;
+}
+
+.container .box-container .box {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background: #000000;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.container .box-container .box img {
+  height: 80%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.container .box-container .box h3 {
+  color: #ffffff;
+  font-size: 13px;
+  padding-bottom: -30px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+}
+/*biography END */
+
+/* story telling */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+body .slider {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+}
+.slider-container {
+  max-width: 1220px;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.slider-content {
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.cards {
+  width: 350px;
+  border-radius: 25px;
+  background-color: #000000;
+}
+
+.images-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+.images-content {
+  position: relative;
+  row-gap: 5px;
+}
+
+.cards-images {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #000000;
+  padding: 3px;
+}
+
+.cards-images .cards-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+}
+.names,
+.descriptions,
+.buttones {
+  text-align: center;
+}
+.names {
+  font-size: 20px;
+  font-weight: 500;
+  color: #f5f5f5;
+}
+
+.descriptions {
+  font-size: 13px;
+  color: #f5f5f5;
+  text-align: justify;
+  margin: 10px 0;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+}
+.buttones {
+  position: relative;
+  overflow: hidden;
+  border: solid 2px white;
+  background-color: inherit;
+  padding: 6px 22px;
+  color: white;
+  margin-top: -6%;
+  width: 38%;
+  height: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+  margin-top: 3%;
+  left: 28%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 25px;
+}
+
+.buttones::after {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+  border-radius: 6px;
+  pointer-events: none;
+  z-index: 999;
+}
+.buttones:hover::after {
+  transform: scale(1);
+}
+
+.buttones:active::after {
+  transform: scale(0);
+}
+
+#buttones.buttones:hover {
+  transform: scale(1.1); /* Scale the button on hover */
+  cursor: pointer;
+}
+
+#buttones .buttones:active {
+  transform: scale(0.9); /* Scale the button on click */
+}
+@media screen and(max-width:1600) {
+  .slider-content {
+    margin: 0 10px;
+  }
+}
