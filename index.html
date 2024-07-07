@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ERAVAULT</title>
+
+    <!-- swiper css -->
+    <link rel="stylesheet" href="swiper-bundle.min.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- style -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- navbar start -->
+    <nav class="navbar">
+      <a href="images/log.png" class="active" onclick="smoothScroll('logo')">
+        <img src="images/log.png" alt="ERAVAULT Logo" />
+      </a>
+
+      <div class="navbar-nav">
+        <a href="#home" class="active" onclick="smoothScroll('home')">Home</a>
+        <a
+          href="#story telling"
+          class="active"
+          onclick="smoothScroll('story telling')"
+          >Story Telling</a
+        >
+        <a href="#biography" class="active" onclick="smoothScroll('biography')"
+          >Biography of Figures</a
+        >
+        <a href="#contact" class="active" onclick="smoothScroll('contact')"
+          >Contact</a
+        >
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search"><i></i></a>
+        <a href="#" id="hamburger-menu" onclick="toggleMenu()"
+          ><i data-feather="menu"></i
+        ></a>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <!-- Hero section start -->
+    <section class="hero" id="home">
+      <main class="container">
+        <div id="slide">
+          <div class="item" style="background-image: url(images/nazi.jpg)">
+            <div class="content">
+              <div class="name">PERKEMBANGAN AWAL NAZI</div>
+
+              <a
+                href="Artikel/nazi.html"
+                class="button"
+                id="button"
+                onclick="smoothScroll('see more')"
+                >See more</a
+              >
+            </div>
+          </div>
+
+          <div
+            class="item"
+            style="background-image: url(images/peradaban\ islam.jpg)"
+          >
+            <div class="content">
+              <div class="name">PERADABAN ISLAM</div>
+
+              <a
+                href="Artikel/PERADABAN ISLAM.html"
+                class="button"
+                id="button"
+                onclick="smoothScroll('see more')"
+                >See more</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="buttons">
+          <button id="prev" class="left-button">
+            <i data-feather="chevron-left"></i>
+          </button>
+          <button id="next" class="right-button">
+            <i data-feather="chevron-right"></i>
+          </button>
+        </div>
+      </main>
+    </section>
+    <!-- Hero section end -->
+    <!-- story telling -->
+    <section class="slide" id="story telling">
+      <div class="container">
+        <div class="box-container">
+          <div class="box">
+            <a href="Artikel/DINASTIUMMAYAH.html" target="_self">
+              <img src="images/baghdad.png" alt="" />
+              <h3>Dinasti Umayyah: Masa Keemasan dan Eksansi Kekuasaan</h3>
+            </a>
+          </div>
+
+          <div class="box">
+            <a href="Artikel/OTTOMAN.html" target="_self">
+              <img src="images/ottoman.png" alt="" />
+              <h3>
+                Reformasi Tanzimat: Modernisasi dan Perubahan Sosial di
+                Kekaisaran Ottoman
+              </h3>
+            </a>
+          </div>
+
+          <div class="box">
+            <a href="Artikel/PALESTINE.html" target="_self">
+              <img src="images/palestine3.jpg" alt="" />
+              <h3>Nakba 1948: Kisah Pengusiran dan Penderitaan Palestina</h3>
+            </a>
+          </div>
+
+          <div class="box">
+            <a href="Artikel/HUSSEIN.html" target="_self">
+              <img src="images/sadam hussein.png" alt="" />
+              <h3>
+                Periode Pemerintahan Saddam Hussein: Kudeta hingga Penggulingan
+              </h3>
+            </a>
+          </div>
+
+          <div class="box">
+            <a href="Artikel/PIRAMIDA.html" target="_self">
+              <img src="images/mesir kuno 2.png" alt="" />
+              <h3>Piramida Giza: Keajaiban Arsitektur Mesir Kuno</h3>
+            </a>
+          </div>
+
+          <div class="box">
+            <a href="Artikel/PERADABAN ISLAM.html" target="_self">
+              <img
+                src="images/romawi.png"
+                alt="Melihat kejatuhan Kekaisaran Romawi yang besar dan dampaknya pada
+            dunia Barat."
+              />
+              <h3>
+                Melihat kejatuhan Kekaisaran Romawi yang besar dan dampaknya
+                pada dunia Barat.
+              </h3>
+            </a>
+          </div>
+          <div class="box">
+            <a href="Artikel/PERADABAN ISLAM.html" target="_self">
+              <img src="images/titanic.png" alt="Tragedi Titanic" />
+              <h3>
+                Tragedi Titanic: Karamnya Kapal Legendaris dan Dampaknya pada
+                Keselamatan Maritim
+              </h3>
+            </a>
+          </div>
+          <div class="box">
+            <a href="Artikel/PERADABAN ISLAM.html" target="_self">
+              <img src="images/revolusi prancis.png" alt=" Revolusi Prancis" />
+              <h3>
+                Revolusi Prancis: Perubahan Sosial dan Politik di Abad ke-18
+              </h3>
+            </a>
+          </div>
+          <div class="box">
+            <a href="Artikel/PERADABAN ISLAM.html" target="_self">
+              <img src="images/ww2.png" alt="Peperangan Dunia II" />
+              <h3>
+                Peperangan Dunia II: Peristiwa Paling Memprihatinkan dalam
+                Sejarah Manusia
+              </h3>
+            </a>
+          </div>
+          <div class="box">
+            <a href="Artikel/PERADABAN ISLAM.html" target="_self">
+              <img src="images/kuba.png" alt="Revolusi Kuba" />
+              <h3>
+                Revolusi Kuba: Perubahan Politik di Bawah Pemerintahan Fidel
+                Castro
+              </h3>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- story telling end-->
+
+      <!-- biography -->
+    </section>
+    <section class="slider" id="biography">
+      <div class="slider-container swiper">
+        <div class="slider-content">
+          <div class="cards-wrapper swiper-wrapper">
+            <div class="cards swiper-slide">
+              <div class="images-content">
+                <span class="overlays"></span>
+                <div class="cards-images">
+                  <img src="images/al-kindi.png" alt="" class="cards-img" />
+                </div>
+              </div>
+              <div class="cards-content">
+                <h2 class="names">
+                  Abū Yūsuf Yaʻqūb ibn ʼIsḥāq aṣ-Ṣabbāḥ al-Kindī
+                </h2>
+                <p class="descriptions">
+                  Al-Kindi (801–873 M) adalah filsuf dan ilmuwan Muslim dari
+                  Irak, dikenal sebagai penerjemah karya Yunani dan kontributor
+                  dalam matematika serta ilmu pengetahuan alam, menyatukan
+                  filsafat Yunani dengan Islam. Warisannya memengaruhi
+                  perkembangan ilmu pengetahuan dan filsafat Islam, dan ia
+                  meninggal di Baghdad pada tahun 873 M.
+                </p>
+                <!--<button class="buttones">see more</button> -->
+              </div>
+            </div>
+            <div class="cards swiper-slide">
+              <div class="images-content">
+                <span class="overlays"></span>
+                <div class="cards-images">
+                  <img
+                    src="images/albert einstein.png"
+                    alt=""
+                    class="cards-img"
+                  />
+                </div>
+              </div>
+              <div class="cards-content">
+                <h2 class="names">Albert Einstein</h2>
+                <p class="descriptions">
+                  Albert Einstein, fisikawan terkenal asal Jerman, lahir pada 14
+                  Maret 1879 dan mengubah pandangan dunia dengan teori
+                  relativitasnya yang revolusioner. Penerima Nobel Fisika pada
+                  1921, Einstein tidak hanya berkontribusi pada ilmu fisika
+                  tetapi juga dikenal sebagai advokat perdamaian dan hak asasi
+                  manusia. Ia meninggal pada 18 April 1955, meninggalkan warisan
+                  ilmiah dan sosial yang abadi.
+                </p>
+                <!--<button class="buttones">see more</button> -->
+              </div>
+            </div>
+            <div class="cards swiper-slide">
+              <div class="images-content">
+                <span class="overlays"></span>
+                <div class="cards-images">
+                  <img
+                    src="images/saddam hussein 2.png"
+                    alt=""
+                    class="cards-img"
+                  />
+                </div>
+              </div>
+              <div class="cards-content">
+                <h2 class="names">Saddam Hussein</h2>
+                <p class="descriptions">
+                  Saddam Hussein (1937-2006) adalah mantan pemimpin Irak yang
+                  memimpin dengan tangan besi. Meskipun berhasil memodernisasi
+                  sektor-sektor tertentu dan memainkan peran dalam stabilitas
+                  regional, kepemimpinannya dihiasi oleh kebijakan otoriter dan
+                  kontroversi hak asasi manusia. Meski dicontroversikan,
+                  beberapa mengingat upayanya dalam membangun Irak.
+                </p>
+                <!--<button class="buttones">see more</button> -->
+              </div>
+            </div>
+            <div class="cards swiper-slide">
+              <div class="images-content">
+                <span class="overlays"></span>
+                <div class="cards-images">
+                  <img src="images/erdogan 2.png" alt="" class="cards-img" />
+                </div>
+              </div>
+              <div class="cards-content">
+                <h2 class="names">Recep Tayyip Erdoğan</h2>
+                <p class="descriptions">
+                  Recep Tayyip Erdoğan, lahir pada 26 Februari 1954 di Istanbul,
+                  adalah Presiden Turki sejak 2014 dan mantan Perdana Menteri
+                  dari 2003 hingga 2014. Ia dikenal sebagai tokoh kontroversial
+                  dengan kebijakan ekonomi progresif dan transformasi politik
+                  yang signifikan.
+                </p>
+                <!--<button class="buttones">see more</button> -->
+              </div>
+            </div>
+            <div class="cards swiper-slide">
+              <div class="images-content">
+                <span class="overlays"></span>
+                <div class="cards-images">
+                  <img
+                    src="images/martin luther king.png"
+                    alt=""
+                    class="cards-img"
+                  />
+                </div>
+              </div>
+              <div class="cards-content">
+                <h2 class="names">Martin Luther King Jr.</h2>
+                <p class="descriptions">
+                  Martin Luther King Jr. (1929-1968) adalah pemimpin hak sipil
+                  Amerika Serikat. Dikenal karena perjuangannya melawan
+                  segregasi rasial dan pidato terkenal "I Have a Dream".
+                  Menerima Nobel Perdamaian 1964. Terbunuh tahun 1968,
+                  warisannya tetap menginspirasi perjuangan hak-hak sipil.
+                </p>
+                <!--<button class="buttones">see more</button> -->
+              </div>
+            </div>
+            <div class="cards swiper-slide">
+              <div class="images-content">
+                <span class="overlays"></span>
+                <div class="cards-images">
+                  <img src="images/gandhi.png" alt="" class="cards-img" />
+                </div>
+              </div>
+              <div class="cards-content">
+                <h2 class="names">Mahatma Gandhi</h2>
+                <p class="descriptions">
+                  Mahatma Gandhi (1869-1948) adalah pemimpin kemerdekaan India
+                  yang memimpin perlawanan tanpa kekerasan melawan penjajahan
+                  Inggris. Melalui kampanye seperti March to the Sea, ia
+                  berperan penting dalam meraih kemerdekaan India pada 1947.
+                  Gandhi dikenal karena prinsip non-kekerasan (ahimsa) dan
+                  filosofi damai. Terbunuh pada tahun 1948 oleh seorang
+                  ekstremis Hindu.
+                </p>
+                <!--<button class="buttones">see more</button> -->
+              </div>
+            </div>
+            <div class="cards swiper-slide">
+              <div class="images-content">
+                <span class="overlays"></span>
+                <div class="cards-images">
+                  <img
+                    src="images/marie curie 2.png"
+                    alt=""
+                    class="cards-img"
+                  />
+                </div>
+              </div>
+              <div class="cards-content">
+                <h2 class="names">Marie Curie</h2>
+                <p class="descriptions">
+                  Marie Curie (1867–1934) adalah ilmuwan Polandia yang
+                  memenangkan dua Nobel dalam fisika dan kimia untuk penelitian
+                  radiasi serta penemuan polonium dan radium. Ia menjadi
+                  perintis dalam bidang ilmu pengetahuan dan adalah tokoh
+                  inspiratif dalam sejarah sains.
+                </p>
+                <!--<button class="buttones">see more</button> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact -->
+    <section id="contact" class="contact">
+      <div class="containerr">
+        <div class="contactInfo">
+          <div>
+            <h2>Contact Info</h2>
+            <ul class="Info">
+              <li>
+                <span><img src="location.png" /></span>
+                <span>
+                  Jl. Kota Medan No.123 Medan, 20238, Sumatera Utara,Indonesia
+                </span>
+                <br />
+                <span><img src="mail.png" /></span>
+                <span> eravault@gmail.com </span> <br />
+                <span><img src="call.png" /></span>
+                <span> 0812-3456-7891 </span>
+              </li>
+            </ul>
+          </div>
+          <ul class="sci">
+            <li>
+              <a href=""><img src="1.png" /></a>
+            </li>
+            <li>
+              <a href=""><img src="2.png" /></a>
+            </li>
+            <li>
+              <a href=""><img src="3.png" /></a>
+            </li>
+            <li>
+              <a href=""><img src="4.png" /></a>
+            </li>
+            <li>
+              <a href=""><img src="5.png" /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="contactForm">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254832.60235549454!2d98.50467978083594!3d3.642271471535399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303131cc1c3eb2fd%3A0x23d431c8a6908262!2sMedan%2C%20Kota%20Medan%2C%20Sumatera%20Utara!5e0!3m2!1sid!2sid!4v1704015230034!5m2!1sid!2sid"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- swiper js -->
+    <script src="swiper-bundle.min.js"></script>
+    <!-- icons -->
+    <script>
+      feather.replace();
+    </script>
+    <!-- js -->
+    <script>
+      function toggleMenu() {
+        var navbarNav = document.querySelector(".navbar-nav");
+        navbarNav.classList.toggle("active");
+      }
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
