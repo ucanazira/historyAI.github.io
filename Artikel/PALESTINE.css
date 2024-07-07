@@ -1,0 +1,214 @@
+:root {
+  --primary: #000000;
+  --bg: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #000000;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 2000px;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: #000000;
+  border-bottom: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.navbar .navbar-nav a {
+  color: #ffffff;
+  padding: 6px 15px;
+  border-radius: 40px;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 1rem;
+}
+
+.navbar-nav a:active,
+.navbar-nav a:focus {
+  background-color: rgba(254, 254, 254, 0.5);
+  color: rgba(0, 0, 0, 0.5);
+}
+.navbar-nav a:hover {
+  background-color: rgba(254, 254, 254, 0.5);
+  color: rgba(0, 0, 0, 0.5);
+}
+.navbar .navbar-extra a {
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+#hamburger-menu {
+  display: inline-block;
+}
+
+.navbar-extra a:hover,
+.navbar-extra a.active {
+  background-color: rgba(254, 254, 254, 0.5);
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* konten */
+.items-container {
+  display: flex;
+  gap: 10px;
+}
+.item {
+  width: 200px;
+  height: 200px;
+  background-position: 50% 50%;
+  background-size: cover;
+  z-index: 1;
+  margin-right: 30px;
+  margin-top: -400px;
+  color: #ffffff;
+  position: relative;
+}
+.item:not(:last-child) {
+  margin-right: 0px;
+}
+.item .text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+}
+.item .content {
+  position: absolute;
+  left: -800px;
+  width: 1000px;
+  top: -250%;
+  color: #ffffff;
+  justify-content: center; /* Memusatkan elemen-elemen di dalamnya secara horizontal */
+  align-items: center; /* Memusatkan elemen secara vertikal */
+}
+.item:nth-child(2) .content {
+  display: block;
+  z-index: 11111;
+}
+.item .name {
+  font-family: "PT Serif", serif;
+  font-size: 60px;
+  font-weight: bold;
+  opacity: 1;
+  color: #ffffff;
+  text-align: left;
+}
+.item .tanggal {
+  font-family: "PT Serif", serif;
+  font-size: 17px;
+  font-weight: 200;
+  opacity: 1;
+  color: #ffffff;
+  text-align: left;
+  margin-top: 10px;
+}
+.item .des-foto {
+  font-family: "PT Serif", serif;
+  font-size: 17px;
+  font-weight: 200;
+  opacity: 1;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 5px;
+}
+.item .des {
+  text-align: justify;
+  margin: 20px 0;
+  opacity: 1;
+  color: #ffffff;
+}
+@keyframes showcontent {
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+    filter: blur(0);
+  }
+}
+.images1 {
+  width: 100%;
+  height: 100%;
+  background-position: 50% 50%;
+  background-size: cover;
+  z-index: 1;
+  display: flex; /* Menggunakan tata letak flexbox */
+  justify-content: space-between; /* Menyebarkan elemen-elemen di dalamnya secara merata */
+  align-items: center; /* Memusatkan elemen secara vertikal */
+}
+.images1 img {
+  width: 100%; /* Gambar mengisi seluruh lebar container */
+  height: auto; /* Memastikan gambar tetap proporsional */
+  margin: 10px; /* Menghilangkan margin agar tidak ada spasi di antara gambar */
+}
+.images2 {
+  width: 100%;
+  height: 50%;
+  background-position: 50% 50%;
+  background-size: cover;
+  z-index: 1;
+  display: flex; /* Menggunakan tata letak flexbox */
+  justify-content: space-between; /* Menyebarkan elemen-elemen di dalamnya secara merata */
+  align-items: center; /* Memusatkan elemen secara vertikal */
+}
+.images2 img {
+  width: 100%; /* Gambar mengisi seluruh lebar container */
+  height: 50%; /* Memastikan gambar tetap proporsional */
+  margin: 10px; /* Menghilangkan margin agar tidak ada spasi di antara gambar */
+}
+.images3 {
+  width: 100%;
+  height: 100%;
+  background-position: 50% 50%;
+  background-size: cover;
+  z-index: 1;
+  display: flex; /* Menggunakan tata letak flexbox */
+  justify-content: space-between; /* Menyebarkan elemen-elemen di dalamnya secara merata */
+  align-items: center; /* Memusatkan elemen secara vertikal */
+}
+.images3 img {
+  width: 100%; /* Gambar mengisi seluruh lebar container */
+  height: auto; /* Memastikan gambar tetap proporsional */
+  margin: 10px; /* Menghilangkan margin agar tidak ada spasi di antara gambar */
+}
