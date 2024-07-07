@@ -32,8 +32,8 @@
   <body>
     <!-- navbar start -->
     <nav class="navbar">
-      <a href="log.png" class="active" onclick="smoothScroll('logo')">
-        <img src="log.png" alt="ERAVAULT Logo" />
+      <a href="images/log.png" class="active" onclick="smoothScroll('logo')">
+        <img src="images/log.png" alt="ERAVAULT Logo" />
       </a>
 
       <div class="navbar-nav">
@@ -53,8 +53,10 @@
       </div>
 
       <div class="navbar-extra">
-        <a href="#" id="search"><i data-feather="search"></i></a>
-        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+        <a href="#" id="search"><i></i></a>
+        <a href="#" id="hamburger-menu" onclick="toggleMenu()"
+          ><i data-feather="menu"></i
+        ></a>
       </div>
     </nav>
     <!-- navbar end -->
@@ -63,19 +65,12 @@
     <section class="hero" id="home">
       <main class="container">
         <div id="slide">
-          <div class="item" style="background-image: url(black.jpg)">
+          <div class="item" style="background-image: url(images/nazi.jpg)">
             <div class="content">
-              <div class="name">BANGSA YUNANI</div>
-
-              <a href="#" class="button">See more</a>
-            </div>
-          </div>
-          <div class="item" style="background-image: url(peradaban\ islam.jpg)">
-            <div class="content">
-              <div class="name">PERADABAN ISLAM</div>
+              <div class="name">PERKEMBANGAN AWAL NAZI</div>
 
               <a
-                href="Artikel/PERADABAN ISLAM.html"
+                href="Artikel/nazi.html"
                 class="button"
                 id="button"
                 onclick="smoothScroll('see more')"
@@ -83,12 +78,16 @@
               >
             </div>
           </div>
-          <div class="item" style="background-image: url(nazi.jpg)">
+
+          <div
+            class="item"
+            style="background-image: url(images/peradaban\ islam.jpg)"
+          >
             <div class="content">
-              <div class="name">PERKEMBANGAN AWAL NAZI</div>
+              <div class="name">PERADABAN ISLAM</div>
 
               <a
-                href="Artikel/nazi.html"
+                href="Artikel/PERADABAN ISLAM.html"
                 class="button"
                 id="button"
                 onclick="smoothScroll('see more')"
@@ -113,15 +112,15 @@
       <div class="container">
         <div class="box-container">
           <div class="box">
-            <a href="Artikel/PERADABAN ISLAM.html" target="_self">
-              <img src="baghdad.png" alt="" />
+            <a href="Artikel/DINASTIUMMAYAH.html" target="_self">
+              <img src="images/baghdad.png" alt="" />
               <h3>Dinasti Umayyah: Masa Keemasan dan Eksansi Kekuasaan</h3>
             </a>
           </div>
 
           <div class="box">
-            <a href="Artikel/PERADABAN ISLAM.html" target="_self">
-              <img src="ottoman.png" alt="" />
+            <a href="Artikel/OTTOMAN.html" target="_self">
+              <img src="images/ottoman.png" alt="" />
               <h3>
                 Reformasi Tanzimat: Modernisasi dan Perubahan Sosial di
                 Kekaisaran Ottoman
@@ -130,15 +129,15 @@
           </div>
 
           <div class="box">
-            <a href="Artikel/PERADABAN ISLAM.html" target="_self">
-              <img src="palestine3.jpg" alt="" />
+            <a href="Artikel/PALESTINE.html" target="_self">
+              <img src="images/palestine3.jpg" alt="" />
               <h3>Nakba 1948: Kisah Pengusiran dan Penderitaan Palestina</h3>
             </a>
           </div>
 
           <div class="box">
-            <a href="Artikel/PERADABAN ISLAM.html" target="_self">
-              <img src="sadam hussein.png" alt="" />
+            <a href="Artikel/HUSSEIN.html" target="_self">
+              <img src="images/sadam hussein.png" alt="" />
               <h3>
                 Periode Pemerintahan Saddam Hussein: Kudeta hingga Penggulingan
               </h3>
@@ -146,8 +145,8 @@
           </div>
 
           <div class="box">
-            <a href="Artikel/PERADABAN ISLAM.html" target="_self">
-              <img src="mesir kuno 2.png" alt="" />
+            <a href="Artikel/PIRAMIDA.html" target="_self">
+              <img src="images/mesir kuno 2.png" alt="" />
               <h3>Piramida Giza: Keajaiban Arsitektur Mesir Kuno</h3>
             </a>
           </div>
@@ -155,7 +154,7 @@
           <div class="box">
             <a href="Artikel/PERADABAN ISLAM.html" target="_self">
               <img
-                src="romawi.png"
+                src="images/romawi.png"
                 alt="Melihat kejatuhan Kekaisaran Romawi yang besar dan dampaknya pada
             dunia Barat."
               />
@@ -167,7 +166,7 @@
           </div>
           <div class="box">
             <a href="Artikel/PERADABAN ISLAM.html" target="_self">
-              <img src="titanic.png" alt="Tragedi Titanic" />
+              <img src="images/titanic.png" alt="Tragedi Titanic" />
               <h3>
                 Tragedi Titanic: Karamnya Kapal Legendaris dan Dampaknya pada
                 Keselamatan Maritim
@@ -176,7 +175,7 @@
           </div>
           <div class="box">
             <a href="Artikel/PERADABAN ISLAM.html" target="_self">
-              <img src="revolusi prancis.png" alt=" Revolusi Prancis" />
+              <img src="images/revolusi prancis.png" alt=" Revolusi Prancis" />
               <h3>
                 Revolusi Prancis: Perubahan Sosial dan Politik di Abad ke-18
               </h3>
@@ -184,7 +183,7 @@
           </div>
           <div class="box">
             <a href="Artikel/PERADABAN ISLAM.html" target="_self">
-              <img src="ww2.png" alt="Peperangan Dunia II" />
+              <img src="images/ww2.png" alt="Peperangan Dunia II" />
               <h3>
                 Peperangan Dunia II: Peristiwa Paling Memprihatinkan dalam
                 Sejarah Manusia
@@ -193,7 +192,7 @@
           </div>
           <div class="box">
             <a href="Artikel/PERADABAN ISLAM.html" target="_self">
-              <img src="kuba.png" alt="Revolusi Kuba" />
+              <img src="images/kuba.png" alt="Revolusi Kuba" />
               <h3>
                 Revolusi Kuba: Perubahan Politik di Bawah Pemerintahan Fidel
                 Castro
@@ -214,7 +213,7 @@
               <div class="images-content">
                 <span class="overlays"></span>
                 <div class="cards-images">
-                  <img src="al-kindi.png" alt="" class="cards-img" />
+                  <img src="images/al-kindi.png" alt="" class="cards-img" />
                 </div>
               </div>
               <div class="cards-content">
@@ -236,7 +235,11 @@
               <div class="images-content">
                 <span class="overlays"></span>
                 <div class="cards-images">
-                  <img src="albert einstein.png" alt="" class="cards-img" />
+                  <img
+                    src="images/albert einstein.png"
+                    alt=""
+                    class="cards-img"
+                  />
                 </div>
               </div>
               <div class="cards-content">
@@ -257,7 +260,11 @@
               <div class="images-content">
                 <span class="overlays"></span>
                 <div class="cards-images">
-                  <img src="saddam hussein 2.png" alt="" class="cards-img" />
+                  <img
+                    src="images/saddam hussein 2.png"
+                    alt=""
+                    class="cards-img"
+                  />
                 </div>
               </div>
               <div class="cards-content">
@@ -277,7 +284,7 @@
               <div class="images-content">
                 <span class="overlays"></span>
                 <div class="cards-images">
-                  <img src="erdogan 2.png" alt="" class="cards-img" />
+                  <img src="images/erdogan 2.png" alt="" class="cards-img" />
                 </div>
               </div>
               <div class="cards-content">
@@ -296,7 +303,11 @@
               <div class="images-content">
                 <span class="overlays"></span>
                 <div class="cards-images">
-                  <img src="martin luther king.png" alt="" class="cards-img" />
+                  <img
+                    src="images/martin luther king.png"
+                    alt=""
+                    class="cards-img"
+                  />
                 </div>
               </div>
               <div class="cards-content">
@@ -315,7 +326,7 @@
               <div class="images-content">
                 <span class="overlays"></span>
                 <div class="cards-images">
-                  <img src="gandhi.png" alt="" class="cards-img" />
+                  <img src="images/gandhi.png" alt="" class="cards-img" />
                 </div>
               </div>
               <div class="cards-content">
@@ -336,7 +347,11 @@
               <div class="images-content">
                 <span class="overlays"></span>
                 <div class="cards-images">
-                  <img src="marie curie 2.png" alt="" class="cards-img" />
+                  <img
+                    src="images/marie curie 2.png"
+                    alt=""
+                    class="cards-img"
+                  />
                 </div>
               </div>
               <div class="cards-content">
@@ -356,7 +371,56 @@
       </div>
     </section>
     <!-- contact -->
-    <section id="contact" class="contact"></section>
+    <section id="contact" class="contact">
+      <div class="containerr">
+        <div class="contactInfo">
+          <div>
+            <h2>Contact Info</h2>
+            <ul class="Info">
+              <li>
+                <span><img src="location.png" /></span>
+                <span>
+                  Jl. Kota Medan No.123 Medan, 20238, Sumatera Utara,Indonesia
+                </span>
+                <br />
+                <span><img src="mail.png" /></span>
+                <span> eravault@gmail.com </span> <br />
+                <span><img src="call.png" /></span>
+                <span> 0812-3456-7891 </span>
+              </li>
+            </ul>
+          </div>
+          <ul class="sci">
+            <li>
+              <a href=""><img src="1.png" /></a>
+            </li>
+            <li>
+              <a href=""><img src="2.png" /></a>
+            </li>
+            <li>
+              <a href=""><img src="3.png" /></a>
+            </li>
+            <li>
+              <a href=""><img src="4.png" /></a>
+            </li>
+            <li>
+              <a href=""><img src="5.png" /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="contactForm">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254832.60235549454!2d98.50467978083594!3d3.642271471535399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303131cc1c3eb2fd%3A0x23d431c8a6908262!2sMedan%2C%20Kota%20Medan%2C%20Sumatera%20Utara!5e0!3m2!1sid!2sid!4v1704015230034!5m2!1sid!2sid"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- swiper js -->
     <script src="swiper-bundle.min.js"></script>
@@ -365,6 +429,13 @@
       feather.replace();
     </script>
     <!-- js -->
+    <script>
+      function toggleMenu() {
+        var navbarNav = document.querySelector(".navbar-nav");
+        navbarNav.classList.toggle("active");
+      }
+    </script>
+
     <script src="script.js"></script>
   </body>
 </html>
