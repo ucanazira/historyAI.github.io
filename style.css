@@ -23,10 +23,11 @@ body {
 /* navbar */
 .navbar {
   display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
   justify-content: space-between;
   align-items: center;
-  padding: 1.4rem 7%;
-
+  padding: 1.2rem 7%;
+  height: 80px;
   position: fixed;
   top: 0;
   left: 0;
@@ -80,15 +81,61 @@ body {
   margin: 0 0.5rem;
 }
 
-#hamburger-menu {
-  display: inline-block;
+/* Menu navigasi aktif */
+.navbar-nav {
+  display: none; /* Sembunyikan menu secara default */
+  position: absolute;
+  top: 80px; /* Sesuaikan dengan tinggi navbar Anda */
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9); /* Warna latar belakang menu */
+  z-index: 999; /* Z-index untuk menumpuk di atas konten lain */
+  transition: transform 0.3s ease-in-out; /* Animasi saat muncul */
+  transform: translateY(-100%);
 }
 
-.navbar-extra a:hover,
-.navbar-extra a.active {
-  background-color: rgba(254, 254, 254, 0.5);
-  color: rgba(0, 0, 0, 0.5);
+.navbar-nav.active {
+  display: flex; /* Tampilkan menu saat aktif */
+  flex-direction: column;
+  transform: translateY(0); /* Geser menu ke posisi tampil */
 }
+
+.navbar-nav a {
+  color: #ffffff;
+  padding: 1rem; /* Padding item menu */
+  text-align: center; /* Posisi teks tengah */
+  transition: background-color 0.3s ease; /* Animasi saat hover */
+}
+
+.navbar-nav a:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Warna latar belakang saat hover */
+}
+
+@media (min-width: 1024px) {
+  .navbar-nav {
+    display: flex !important; /* Tampilkan menu di atas 1024px */
+    background-color: transparent; /* Hapus latar belakang di desktop */
+    position: static;
+    transform: translateY(0);
+  }
+
+  .navbar-nav.active {
+    display: flex; /* Pastikan menu tetap tampil di desktop */
+  }
+}
+
+@media (max-width: 1024px) {
+  #hamburger-menu {
+    display: inline-block; /* Tampilkan tombol hamburger di bawah 1024px */
+    margin-right: 1rem;
+  }
+}
+
 @media (max-width: 1600px) {
   .navbar,
   .navbar-extra {
@@ -328,7 +375,7 @@ body {
   background: #000000;
   padding: 15px 9%;
   padding-bottom: 50px;
-  margin-top: -400px;
+  margin-top: -300px;
 }
 
 .container .box-container {
@@ -501,4 +548,127 @@ body .slider {
   .slider-content {
     margin: 0 10px;
   }
+}
+/* Contact */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000000;
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+}
+
+.containerr {
+  position: relative;
+  min-width: 1100px;
+  min-height: 550px;
+  display: flex;
+  z-index: 1000;
+}
+
+.containerr .contactInfo {
+  position: absolute;
+  top: 40px;
+  width: 350px;
+  height: calc(100% - 80px);
+  background-color: #b78c56;
+  z-index: 1;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+
+.containerr .contactInfo h2 {
+  color: #f5f5f5;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.containerr .contactInfo ul.Info {
+  position: relative;
+  margin: 20px 0;
+}
+
+.containerr .contactInfo ul.Info li {
+  position: relative;
+  list-style: none;
+  margin: 20px 0;
+  cursor: pointer;
+  display: block;
+  align-items: center;
+}
+
+.containerr .contactInfo ul.Info li span:nth-child(1) {
+  width: 30px;
+  min-width: 30px;
+}
+
+.containerr .contactInfo ul.Info li span img {
+  width: 30px; /* Adjust the desired width */
+  height: auto; /* Maintain aspect ratio */
+  filter: brightness(0) invert(1);
+  display: block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.containerr .contactInfo ul.Info li span:nth-child(2) {
+  margin-right: 10px; /* Adjust this value to control the spacing between icon and text */
+  color: #fff;
+}
+
+.containerr .contactInfo ul.sci {
+  position: relative;
+  display: flex;
+}
+
+.containerr .contactInfo ul.sci li {
+  list-style: none;
+  margin-right: 15px;
+}
+
+.containerr .contactInfo ul.sci li img {
+  filter: invert(1);
+}
+
+.containerr .contactForm {
+  position: absolute;
+  padding: 70px 50px;
+  padding-left: 270px;
+  margin: 110px;
+  top: -110px;
+  width: calc(100% - 105px);
+  height: calc(100% - -1px);
+  background-color: #741102;
+  box-shadow: 0 50px 50px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  border: 10px solid #fff; /* Border width and color */
+  border-radius: 15px; /* Border radius for rounded corners */
+}
+.containerr .contactForm iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(100%); /* Convert the map to grayscale */
+  opacity: 0.8; /* Adjust the opacity of the map */
+  border-radius: 5px; /* Adjust the border radius for the map */
 }
